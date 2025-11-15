@@ -69,6 +69,16 @@ img{
  .mt-4{
     margin-top:4rem;
  }
+ .mt-half{
+    margin-top: .5rem;
+ }
+  .m-auto{
+    margin:auto;
+  }
+
+  .mt-one-half{
+    margin-top:1.5rem;
+  }
  
 
 
@@ -202,19 +212,445 @@ p{
     margin-top: 1.5rem;
     margin-bottom:1rem ;
  }
+/* SECTION 02 */
+.order-card{
+    flex: 1;
+    flex-basis:300px;
+    background: var(--pure-white);
+        border: .1rem solid var(--gold-finger);
+        border-radius: 2rem;
 
+        box-shadow: rgba(0,0,0,0.05) 8px 8px 15px; /* FIXED */
+}
+.order-card img{
+    width:15rem;
+    filter: drop-shadow(
+          rgba(0, 0, 0, 0.279) 0 10px 10px
+    );
+}
+.card-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;  /* so it adjusts on small screens */
+    margin-top: 3rem;
+}
+.order-card {
+    width: 320px;
+    padding: 2rem 1rem;
+}
+h4{
+    font-size:1.8rem;
+    color : var(--lead);
+}
+.order-card .price{
+    font-size: 1.7rem;
+    color:var(--gold-finger);
+    padding : 1.3rem 0 2 rem 0;
 
+}
+ /* CART TAB STYLING */
+.cart-tab{
+    background: var(--hint-yellow);
+    position:fixed;
+    inset:0 -500px 0 auto;
+    width:25rem;
+    padding-block:2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.1) -10px -10px 20px;
+    transition: 1s ease-in-out;
+}
+.cart-tab-active{
+    inset:0 0 0 auto;
+}
+.cart-list{
+    flex:1;
+    width:100%;
+    margin-top:1.5rem ;
+
+}
+.cart-list{
+    flex:1;
+    width: 100%;
+    margin-top: 1.5rem;
+    overflow: auto;
+
+}
+ .cart-list::-webkit-scrollbar{
+    width: 0;
+ }
+
+.total-container{
+    width:100%;
+    background: var(--gold-finger);
+    text-align:center;
+    margin-block: 1rem;
+    padding-block: 1rem;
+}
+
+.total-container h4{
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight:400;
+}
+
+.btn-container .btn{
+    background: var(--lead);
+    transition: 3s ease;
+}
+
+.btn-container .btn:hover{
+    background: var(--gold-finger);
+    color:var(--lead);
+}
+
+/* 🔥 FIXED VERTICAL SPACING */
+.item{
+    display: flex;
+    align-items: center;
+    gap:0.7rem;
+    padding:0.5rem 0.8rem;   /* smaller padding */
+}
+
+.item .item-image img{
+    width:4rem;              /* slightly smaller image */
+}
+
+.item h4{
+    font-size: 1.1rem;
+    color:var(--lead);
+    margin:0;                /* remove extra space */
+    line-height: 1.2;        /* reduce height */
+}
+
+/* 🔥 FIX: Remove huge empty space */
+.item .item-total{
+    font-weight: 400;
+    margin-top: 0.5rem;       /* earlier 3rem → reduced */
+}
+ .item .detail{
+    flex:2;
+ }
+.cart-list .item:nth-child(even){
+    background: var(--eye-ball);
+}
+
+.quantity-btn{
+    background: var(--lead);
+    color:var(--pure-white);
+    width: 1.6rem;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    text-align: center;
+    line-height: 1.6rem;
+}
+
+.quantity-value{
+    font-size: 1.1rem;
+    font-weight:400 ;
+    margin-inline: .4rem;
+}
+
+ /* SECTION WRAPPER 03 */
+.review-section {
+    padding: 4rem 0;
+}
+
+.review-section-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* LEFT IMAGE */
+.review-section-container .image-container img {
+    width: 480px;
+    height: auto;
+    border-radius: 2rem;
+}
+
+/* RIGHT CONTENT */
+.review-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+/* TITLES */
+.sub-title {
+    color: var(--gold-finger);
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.main-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+/* SWIPER FIXES */
+.mySwiper {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem 0;
+}
+
+.swiper-wrapper {
+    padding-bottom: 2rem;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* REVIEW CARD */
+.review-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    border: 1px solid var(--gold-finger);
+    box-shadow: rgba(0,0,0,0.05) 0 8px 15px;
+    width: 100%;
+}
+
+/* HEADER */
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.review-user-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: .3rem;
+}
+
+.stars i {
+    color: var(--gold-finger);
+    font-size: 1rem;
+}
+
+/* ARROWS */
+.custom-arrow {
+    width: 45px;
+    height: 45px;
+    background: var(--gold-finger);
+    border-radius: 50%;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Position the arrows like the reference */
+.swiper-button-prev {
+    left: 0;
+    transform: translateY(30px);
+}
+
+.swiper-button-next {
+    right: 0;
+    transform: translateY(30px);
+}
+/* Make swiper arrows smaller */
+.swiper-button-next,
+.swiper-button-prev {
+    width: 30px !important;   /* reduce button size */
+    height: 30px !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 16px !important; /* reduce arrow icon size */
+    color: #333; /* optional: change color */
+}
+/* Review Section Responsive Fix */
+.review-section-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* For mobile */
+@media (max-width: 768px) {
+    .review-section-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .review-section .image-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .review-section .image-container img {
+        width: 70%;
+        max-width: 300px;
+    }
+
+    .review-content {
+        width: 100%;
+    }
+
+    .mySwiper {
+        width: 100%;
+    }
+
+    .swiper-slide {
+        width: 100% !important;
+    }
+}
+
+ /* SECTION 04 */
+  .app-container{
+    background: var(--hint-yellow);
+    padding:1rem 6rem;
+    border-radius:3rem;
+    padding-left: 3rem;
+    
+
+  }
+.app-container h2{
+    font-size:4.5rem;
+}
+
+  .app-container .image-container img{
+    width:25rem;
+  }
+
+  /* SECTION 05 */
+
+  .input-container{
+    width: 43rem;
+    max-width: 100%;
+    background:var(--pure-white);
+    padding: .8rem;
+    box-shadow: 
+    rgba(0, 0, 0, 0.281) 0 5px 8px;
+    border-radius: 1rem;
+    margin:4rem auto ;
+  }
+  input[type="email"]{
+    flex:1;
+    height:7vh;
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+  }
+  input[type="email"]:focus{
+    outline: none;
+  }
 
 /* FOOTER STYLING */
 
+/* Main Footer Background */
+footer {
+    background: #F8EFC9;
+    padding: 30px 0;      /* reduced from 60px */
+    margin-top: 4rem;     /* cleaner spacing above footer */
+}
 
+/* Outer container */
+.footer-container {
+    padding-bottom: 2rem; /* reduced size */
+}
 
+/* Grid layout for footer columns */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 1.2rem;          /* reduced gap */
+}
 
+/* Left Logo */
+.footer-box .logo {
+    font-size: 1.7rem;    /* reduced */
+    font-weight: 700;
+    color: #E7B200;
+    text-decoration: none;
+}
 
+/* Paragraph under logo */
+.footer-box .para {
+    margin: 0.3rem 0 0.6rem 0; /* tight spacing */
+    line-height: 1.4;
+    color: #666;
+}
 
+/* Social icons container */
+.social-row {
+    display: flex;
+    gap: 0.6rem;          /* compact spacing */
+    margin-top: 5px;
+}
 
+/* Each social icon box */
+.social-icon {
+    width: 38px;          /* smaller */
+    height: 38px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Icon inside */
+.social-icon i {
+    font-size: 18px;      /* reduced */
+    color: #333;
+}
 
+/* Footer Column Title */
+.footer-title {
+    font-size: 1.05rem;   /* reduced */
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+/* Link lists */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.4rem; /* tighter */
+}
+
+.footer-links a {
+    color: #444;
+    text-decoration: none;
+    font-size: 0.9rem;    /* reduced text */
+}
+
+.footer-links a:hover {
+    color: #E7B200;
+}
 
 
 
@@ -286,5 +722,12 @@ p{
       h2{
         font-size: 3rem;
       }
+      /* SECTION 04 */
+      .app-container content h2{
+        font-size: 3rem;
+
+
+      }
+
 
 }
